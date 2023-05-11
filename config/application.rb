@@ -18,5 +18,8 @@ module TasteMediaPrismicBlog
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Add custom CSS files to the asset pipeline
+    config.assets.precompile += %w(custom.css)
   end
 end
