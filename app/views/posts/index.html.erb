@@ -19,7 +19,7 @@
           <!-- Slides -->
           <div class="carousel-inner">
             <% @posts.each do |post| %>
-              <div class="carousel-item">
+              <div class="carousel-item <%= 'active' if post == @posts.first %>">
                 <h2><%= link_to post.title, post_path(post) %></h2>
                 <p><%= post.content %></p>
               </div>
