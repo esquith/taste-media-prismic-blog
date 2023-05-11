@@ -1,18 +1,41 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <% @posts.each_with_index do |post, index| %>
-      <div class="carousel-item <%= 'active' if index == 0 %>">
-        <h2><%= link_to post.title, post %></h2>
-        <p><%= link_to "Read More", post %></p>
+<%= render 'layouts/navbar' %>
+
+<header class="masthead">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1>Welcome to TasteMediaPrismicBlog</h1>
+        <p>Explore our delicious blog posts and satisfy your cravings!</p>
       </div>
-    <% end %>
+    </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+</header>
+
+<section class="blog-posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <% @posts.each_with_index do |post, index| %>
+              <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
+                <h2><%= link_to post.title, post_path(post) %></h2>
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="carousel-control-prev" href="#blogCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#blogCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
