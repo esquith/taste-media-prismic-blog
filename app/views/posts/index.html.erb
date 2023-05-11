@@ -21,6 +21,7 @@
             <% @posts.each_with_index do |post, index| %>
               <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
                 <h2><%= link_to post.title, post_path(post) %></h2>
+                <p><%= post.content %></p> <!-- Assuming there is a content attribute in your Post model -->
               </div>
             <% end %>
           </div>
