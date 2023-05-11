@@ -1,0 +1,10 @@
+.container {
+  margin-top: 20px;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item h2 {
+  font-size: 24px;
