@@ -1,3 +1,4 @@
+
 .container {
   margin-top: 20px;
 }
@@ -8,3 +9,5 @@
 
 .carousel-item h2 {
   font-size: 24px;
+  margin-bottom: 20px;
+}
