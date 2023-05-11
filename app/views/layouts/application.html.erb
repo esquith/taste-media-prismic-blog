@@ -78,9 +78,9 @@
             <div id="blogCarousel" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
-                <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#blogCarousel" data-slide-to="1"></li>
-                <li data-target="#blogCarousel" data-slide-to="2"></li>
+                <% @posts.each_with_index do |post, index| %>
+                  <li data-target="#blogCarousel" data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %>"></li>
+                <% end %>
               </ol>
 
               <!-- Slides -->
