@@ -132,6 +132,7 @@ GEM
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    pg (1.5.3)
     prismic.io (1.8.2)
       hashery (~> 2.1.1)
     public_suffix (5.0.1)
@@ -223,6 +224,7 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  pg
   prismic.io (~> 1.7)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
