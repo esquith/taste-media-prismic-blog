@@ -20,6 +20,7 @@ module TasteMediaPrismicBlog
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Add custom CSS files to the asset pipeline
+    config.assets.enabled = true
     config.assets.precompile += %w(custom.css)
   end
 end
